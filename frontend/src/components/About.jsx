@@ -23,12 +23,12 @@ function About() {
     }, []);
 
     return (
-        <section ref={sectionRef} className="relative w-full py-16 md:py-20 lg:py-24 px-4 md:px-8" style={{ padding: '3rem' }}>
-            <div className="max-w-7xl mx-auto">
+        <section id="#about" ref={sectionRef} className="relative w-full py-16 md:py-20 lg:py-24 px-4 md:px-8" style={{ padding: '3rem' }}>
+            <div className="max-w-full mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Image Side */}
                     <div className="reveal">
-                        <div className="relative h-[500px] rounded-lg overflow-hidden shadow-2xl">
+                        <div className="relative h-125 rounded-lg overflow-hidden shadow-2xl">
                             <div
                                 className="absolute inset-0 bg-cover bg-center"
                                 style={{
@@ -44,11 +44,11 @@ function About() {
                             <span className="text-yellow-500 text-sm tracking-[0.3em] uppercase font-light">
                                 Our Story
                             </span>
-                            <div className="w-16 h-0.5 bg-yellow-500 mt-2"></div>
+                            <div className="w-auto h-0.5 bg-yellow-500 mt-2"></div>
                         </div>
 
                         <h2 className="font-display text-5xl md:text-7xl font-bold text-amber-50 leading-tight">
-                            A Rooftop Taste of <span className="text-yellow-500">Darjeeling</span>
+                            A Rooftop Taste of <span className="text-yellow-500 font-thin">Darjeeling</span>
                         </h2>
 
                         <p className="hidden md:block text-amber-50/50 text-sm md:text-lg leading-relaxed">

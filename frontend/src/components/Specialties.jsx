@@ -1,4 +1,8 @@
 import { useEffect, useRef } from 'react';
+import prawn from '../assets/prawn.jpg';
+import chicken from '../assets/chicken.jpg'
+import momo from '../assets/momo.jpg';
+import steak from '../assets/steak.jpg'
 
 function Specialties() {
     const sectionRef = useRef(null);
@@ -23,43 +27,49 @@ function Specialties() {
 
     const specialties = [
         {
-            name: 'Tagliatelle al Tartufo',
-            description: 'Fresh handmade pasta with black truffle, parmigiano, and butter sauce',
-            price: '$32',
+            img: prawn,
+            name: 'Prawn Bomb',
+            description: '6PCS Juicy prawn balls cooked in special dark sauce with fried green chilli',
+            price: '₹349',
+            gradient: 'from-pink-900 to-rose-800',
+        },
+        {
+            img: chicken,
+            name: 'Chicken Stroganoff',
+            description: 'Russian dish, made with chicken, mushroom, onions and spices in a creamy sauce & served with herbed rice',
+            price: '₹349',
+            gradient: 'from-orange-900 to-amber-800',
+        },
+        {
+            img: momo,
+            name: 'Hot Steam Gyoza',
+            description: '5pcs Chicken MOMO served in Bamboo Basket with Red spicy sauce',
+            price: '₹169',
+            gradient: 'from-red-900 to-orange-700',
+        },
+        {
+            img: steak,
+            name: 'Chicken Steak',
+            description: 'Served with herbed rice, sauté vegetables, mashed potato & poached egg',
+            price: '₹349',
             gradient: 'from-amber-900 to-yellow-800',
-        },
-        {
-            name: 'Bistecca alla Fiorentina',
-            description: 'Grilled T-bone steak with rosemary, olive oil, and roasted vegetables',
-            price: '$48',
-            gradient: 'from-red-900 to-orange-800',
-        },
-        {
-            name: 'Risotto ai Funghi Porcini',
-            description: 'Creamy arborio rice with porcini mushrooms and aged parmesan',
-            price: '$28',
-            gradient: 'from-stone-800 to-amber-900',
-        },
-        {
-            name: 'Tiramisù Classico',
-            description: 'Traditional Italian dessert with espresso-soaked ladyfingers and mascarpone',
-            price: '$12',
-            gradient: 'from-amber-800 to-yellow-700',
         },
     ];
 
     return ( 
-        <section ref={sectionRef} className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-16 bg-slate-950">
-            <div className="max-w-full mx-auto">
+        <section id="#specialties" ref={sectionRef} className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-16 bg-blend-color">
+            <div className="max-w-full mx-auto" style={{ padding: '3rem' }}>
                 {/* Section Header */}
-                <div className="text-center mb-20 reveal" style={{ paddingBottom: '2rem' }}>
-                    <span className="text-yellow-500 text-sm tracking-[0.3em] uppercase font-light">
+                <div className="text-center mb-20 reveal" style={{ padding: '2rem' }}>
+                    <span className="text-yellow-500 text-sm tracking-[0.3em] uppercase font-light block mb-4">
                         Chef's Selection
                     </span>
-                    <h2 className="font-display text-5xl md:text-7xl font-bold text-amber-50 mt-4 mb-6">
-                        Our <span className="text-yellow-500">Specialties</span>
-                    </h2>
-                    <div className="w-24 h-1 bg-yellow-500 mx-auto"></div>
+                    <div className="inline-block">
+                        <p className="font-display text-5xl md:text-7xl font-bold text-amber-50 mb-4">
+                            Our <span className="text-yellow-500 font-thin">Specialties</span>
+                        </p>
+                        <div className="h-1 bg-yellow-500"></div>
+                    </div>
                 </div>
 
                 {/* Specialties Grid */}
@@ -74,18 +84,26 @@ function Specialties() {
                                 {/* Image Placeholder with Gradient */}
                                 <div className={`h-64 bg-linear-to-br ${item.gradient} relative overflow-hidden`}>
                                     <div className="absolute inset-0 bg-black/20 group-hover:bg-black/10 transition-all duration-300"></div>
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-yellow-400 font-thin text-7xl font-display">
-                                            {item.name.charAt(0)}
+                                    {item.img ? (
+                                        <img 
+                                            src={item.img} 
+                                            alt={item.name}
+                                            className="w-full h-full object-cover"
+                                        />
+                                    ) : (
+                                        <div className="absolute inset-0 flex items-center justify-center">
+                                            <div className="text-yellow-400 font-thin text-7xl font-display">
+                                                {item.name.charAt(0)}
+                                            </div>
                                         </div>
-                                    </div>
+                                    )}
                                     {/* Hover overlay */}
                                     <div className="absolute inset-0 bg-yellow-500/0 group-hover:bg-yellow-500/10 transition-all duration-300"></div>
                                 </div>
 
                                 {/* Content */}
                                 <div className="p-6 flex-1 flex flex-col">
-                                    <div className="flex justify-between items-start mb-3">
+                                    <div className="flex justify-between items-start mb-3" style={{ padding: '1rem' }}>
                                         <p className="p-2 font-display text-4xl font-thin text-yellow-400 group-hover:text-yellow-500 transition-colors duration-300">
                                             {item.name}
                                         </p>
@@ -93,10 +111,10 @@ function Specialties() {
                                             {item.price}
                                         </span>
                                     </div>
-                                    <p className="text-yellow-200 text-sm leading-relaxed flex-1">
+                                    <p className="text-yellow-200 text-sm leading-relaxed flex-1" style={{ padding: '1rem' }}>
                                         {item.description}
                                     </p>
-                                    <div className="mt-4 pt-4 border-t border-yellow-500/20">
+                                    <div className="mt-4 pt-4 border-t border-yellow-500/20" style={{ padding: '1rem' }}>
                                         <span className="text-yellow-500 text-xs uppercase tracking-wider group-hover:tracking-widest transition-all duration-300">
                                             Order Now →
                                         </span>
