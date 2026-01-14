@@ -2,8 +2,8 @@ import RestaurantMap from "./Map";
 
 function Location() {
     return (
-        <section id="#location" className="relative w-full py-16 md:py-20 lg:py-24 px-4 md:px-8 bg-linear-to-b from-slate-950 to-black">
-            <div className="max-w-full" style={{ margin: '1%', padding: '2rem' }}>
+        <section id="location" className="relative w-full py-16 md:py-20 lg:py-24 px-4 md:px-8 bg-linear-to-b from-slate-950 to-black">
+            <div className="max-w-full mx-auto" style={{ padding: '2rem' }}>
                 {/* Header */}
                 <div className="text-center mb-12">
                     <div className="inline-block mb-4">
@@ -41,11 +41,11 @@ function Location() {
                             <div className="space-y-2 text-amber-50">
                                 <p className="flex justify-between">
                                     <span>Monday - Friday:</span>
-                                    <span>11:00 AM - 10:00 PM</span>
+                                    <span>12:30 PM - 11:00 PM</span>
                                 </p>
                                 <p className="flex justify-between">
                                     <span>Saturday - Sunday:</span>
-                                    <span>11:00 AM - 11:00 PM</span>
+                                    <span>12:30 PM - 11:00 PM</span>
                                 </p>
                             </div>
                         </div>

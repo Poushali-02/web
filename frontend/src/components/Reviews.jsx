@@ -13,7 +13,7 @@ function Reviews() {
   }, [reviews.length]);
 
   return (
-    <section className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-16 relative overflow-hidden bg-linear-to-b from-slate-950 to-black">
+    <section id="reviews" className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-16 relative overflow-hidden bg-blend-color">
       <div className="max-w-full mx-auto relative" style={{ padding: "2rem" }}>
         {/* Section Header */}
         <div className="text-center mb-20" style={{ padding: "1rem" }}>

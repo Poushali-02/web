@@ -50,8 +50,8 @@ function Menu() {
     const currentMenu = menuData[activeCategory];
 
     return (
-        <section id="#menu" ref={sectionRef} className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-16 bg-linear-to-b from-slate-950 to-black">
-            <div className="max-w-full mx-auto"  style={{ padding: '3rem' }}>
+        <section id="menu" ref={sectionRef} className="py-16 md:py-20 lg:py-24 px-5 md:px-8 lg:px-16 bg-linear-to-b from-slate-950 to-black">
+            <div className="max-w-full mx-auto"  style={{ padding: '1rem' }}>
                 {/* Section Header */}
                 <div className="text-center mb-16 reveal"  style={{ margin: '1rem' }}>
                     <span className="text-yellow-400 text-xs md:text-sm tracking-[0.4em] uppercase font-light">

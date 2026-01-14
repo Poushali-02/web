@@ -37,7 +37,7 @@ function Hero() {
     };
 
     return (
-        <section id="#home" className="relative h-screen w-full overflow-hidden" style = {{paddingBottom: '3rem'}}>
+        <section id="home" className="relative h-screen w-full max-w-full overflow-hidden" style = {{paddingBottom: '3rem'}}>
             {/* Background Image with Slow Zoom */}
             <div
                 className="absolute inset-0 bg-cover bg-center animate-slow-zoom"
@@ -47,7 +47,7 @@ function Hero() {
                 }}
             >
                 {/* Decorative overlay */}
-                <div className="absolute inset-0 opacity-20" style={{
+                <div className="absolute inset-0 opacity-20 max-w-full" style={{
                     backgroundImage: `radial-gradient(circle at 20% 30%, rgba(212, 175, 55, 0.15) 0%, transparent 50%),
                            radial-gradient(circle at 80% 70%, rgba(193, 120, 23, 0.15) 0%, transparent 50%)`
                 }}></div>

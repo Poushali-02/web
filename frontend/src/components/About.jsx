@@ -23,8 +23,8 @@ function About() {
     }, []);
 
     return (
-        <section id="#about" ref={sectionRef} className="relative w-full py-16 md:py-20 lg:py-24 px-4 md:px-8" style={{ padding: '3rem' }}>
-            <div className="max-w-full mx-auto">
+        <section id="about" ref={sectionRef} className="relative w-full max-w-full py-16 md:py-20 lg:py-24 px-4 md:px-8" style={{ padding: '3rem' }}>
+            <div className="w-full max-w-7xl mx-auto">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
                     {/* Image Side */}
                     <div className="reveal">

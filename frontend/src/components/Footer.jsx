@@ -1,9 +1,9 @@
 function Footer() {
   return (
-    <footer className=" text-amber-50 border-t border-yellow-500/30">
+    <footer className="text-amber-50 border-t border-yellow-500/30 w-full bg-linear-to-b from-slate-950 to-black">
       {/* Main Footer Content */}
-      <div className="py-20 px-4 md:px-8 lg:px-16">
-        <div className="max-w-full" style={{ margin: "1%", padding: "2rem" }}>
+      <div className="py-20 px-4 md:px-8 lg:px-16 w-full">
+        <div className="max-w-full mx-auto">
           {/* Top Section - Logo & Tagline */}
           <div className="text-center m-16" style={{ padding: "0.5rem" }}>
             <div className="inline-block">
@@ -21,7 +21,7 @@ function Footer() {
           {/* Main Grid */}
           <div className="grid md:grid-cols-4 gap-12 mb-16">
             {/* Hours */}
-            <div style={{ margin: '5%', padding: '5%' }}>
+            <div style={{ margin: "5%", padding: "5%" }}>
               <h3 className="font-display text-2xl font-bold text-yellow-500 mb-6 flex items-center">
                 <svg
                   className="w-6 h-6 mr-3"
@@ -38,33 +38,43 @@ function Footer() {
                 </svg>
                 Hours
               </h3>
-              <div className="space-y-4 text-amber-50/80">
-                <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-amber-50">Lunch</span>
-                    <span className="text-sm">Mon - Sat</span>
+              <div>
+                {/* Operating Hours */}
+                <div
+                  className="bg-yellow-500/10 border border-yellow-500/20 rounded-lg"
+                  style={{ margin: "0.1rem", padding: "1rem" }}
+                >
+                  <div className="text-sm tracking-wide text-amber-200 font-semibold">
+                    Every Day
                   </div>
-                  <div className="text-yellow-500">11:30 AM - 3:00 PM</div>
+                  <div className="text-xl font-bold text-yellow-400">
+                    12:30 PM - 11:00 PM
+                  </div>
                 </div>
-                <div className="w-full h-px bg-yellow-500/20"></div>
-                <div>
-                  <div className="flex justify-between items-center mb-1">
-                    <span className="font-semibold text-amber-50">Dinner</span>
-                    <span className="text-sm">Mon - Sat</span>
-                  </div>
-                  <div className="text-yellow-500">5:00 PM - 10:30 PM</div>
+
+                {/* Status Badge */}
+                <div
+                  className="inline-flex items-center justify-center px-3 py-1.5 bg-emerald-600/20 border border-emerald-400"
+                  style={{ marginLeft: "3%", padding: "0.5rem" }}
+                >
+                  <span className="w-1 h-1 bg-emerald-400 rounded-full mr-2 animate-pulse"></span>
+                  <span className="text-xs font-medium text-emerald-300 tracking-wide text-center">
+                    Open Now
+                  </span>
                 </div>
-                <div className="w-full h-px bg-yellow-500/20"></div>
-                <div className="mt-4 px-3 py-2 bg-amber-900/50 rounded border border-yellow-500/20">
-                  <div className="text-orange-600 text-sm font-semibold">
-                    ⚠ Closed Sundays
-                  </div>
+
+                {/* Additional Info */}
+                <div className="pt-2 border-t border-amber-50/10">
+                  <p className="text-xs text-amber-50/60 leading-relaxed">
+                    Closed on special occasions. Call ahead to confirm
+                    availability.
+                  </p>
                 </div>
               </div>
             </div>
 
             {/* Location */}
-            <div  style={{ margin: '5%', padding: '5%' }}>
+            <div style={{ margin: "5%", padding: "5%" }}>
               <h3 className="font-display text-2xl font-bold text-yellow-500 mb-6 flex items-center">
                 <svg
                   className="w-6 h-6 mr-3"
@@ -90,12 +100,12 @@ function Footer() {
               <div className="space-y-3 text-amber-50/80">
                 <div>
                   <p className="font-semibold text-amber-50 text-lg mb-2">
-                    Bella Cucina
+                    Little Darjeeling
                   </p>
                   <p className="leading-relaxed">
-                    123 Via Roma Street
+                    99/40, Ward 10, AIC Road, 2nd floor
                     <br />
-                    New York, NY 10001
+                    Khardah, Kolkata
                   </p>
                 </div>
                 <div className="w-full h-px bg-yellow-500/20 my-4"></div>
@@ -118,7 +128,7 @@ function Footer() {
                       />
                     </svg>
                     <span className="group-hover:tracking-wide transition-all duration-300">
-                      (212) 555-1234
+                      090887 81130
                     </span>
                   </a>
                   <a
@@ -139,7 +149,7 @@ function Footer() {
                       />
                     </svg>
                     <span className="group-hover:tracking-wide transition-all duration-300">
-                      info@bellacucina.com
+                      cafelittledarjeeling@gmail.com
                     </span>
                   </a>
                 </div>
@@ -147,7 +157,7 @@ function Footer() {
             </div>
 
             {/* Quick Links */}
-            <div  style={{ margin: '5%', padding: '5%' }}>
+            <div style={{ margin: "5%", padding: "5%" }}>
               <h3 className="font-display text-2xl font-bold text-yellow-500 mb-6 flex items-center">
                 <svg
                   className="w-6 h-6 mr-3"
@@ -189,7 +199,7 @@ function Footer() {
             </div>
 
             {/* Connect */}
-            <div  style={{ margin: '5%', padding: '5%' }}>
+            <div style={{ margin: "5%", padding: "5%" }}>
               <h3 className="font-display text-2xl font-bold text-yellow-500 mb-6 flex items-center">
                 <svg
                   className="w-6 h-6 mr-3"
@@ -206,17 +216,19 @@ function Footer() {
                 </svg>
                 Connect
               </h3>
-              <div className="space-y-4">
+              <div className="flex-row">
                 <p className="text-amber-50/80 leading-relaxed">
                   Follow us for daily specials, seasonal menus, and exclusive
                   offers!
                 </p>
 
                 {/* Social Media Icons */}
-                <div className="flex space-x-3">
+                <div className="flex gap-4" style={{ paddingTop: "1rem" }}>
                   <a
-                    href="#"
+                    href="https://www.facebook.com/CafeLittleDarjeeling/"
                     className="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-slate-950 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Facebook"
                   >
                     <svg
@@ -228,8 +240,10 @@ function Footer() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/littledarjeeling?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     className="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-slate-950 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
+                    target="_blank"
+                    rel="noopener noreferrer"
                     aria-label="Instagram"
                   >
                     <svg
@@ -241,35 +255,42 @@ function Footer() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://magicpin.in/Kolkata/Khardah/Restaurant/Little-Darjeeling/store/5cb429/?srsltid=AfmBOop6gln0A0U-j_fAwRu75ipc_Pgsvb_Fnruw7V4-_fd2OX2J4ygA"
                     className="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-slate-950 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
-                    aria-label="Twitter"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="MagicPin"
                   >
                     <svg
-                      className="w-6 h-6"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="48"
+                      height="48"
+                      viewBox="0 0 48 48"
                     >
-                      <path d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z" />
+                      <title>Magicpin SVG Icon</title>
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M40.37 20.87C40.37 32.874 24 43.5 24 43.5S7.63 32.873 7.63 20.87C7.63 11.83 14.958 4.5 24 4.5s16.37 7.33 16.37 16.37"
+                      />
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M24 8.72c6.71 0 12.15 5.44 12.15 12.15C36.15 29.78 24 37.667 24 37.667S11.85 29.78 11.85 20.871c0-6.71 5.44-12.15 12.15-12.15"
+                      />
+                      <path
+                        fill="none"
+                        stroke="currentColor"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="M31.93 20.87c0 5.815-7.93 10.962-7.93 10.962s-7.93-5.147-7.93-10.961a7.93 7.93 0 1 1 15.86 0"
+                      />
                     </svg>
                   </a>
-                </div>
-
-                {/* Newsletter */}
-                <div className="mt-6 pt-6 border-t border-yellow-500/20">
-                  <p className="text-amber-50/70 text-sm mb-3">
-                    Subscribe to our newsletter
-                  </p>
-                  <div className="flex">
-                    <input
-                      type="email"
-                      placeholder="Your email"
-                      className="flex-1 px-4 py-2 bg-amber-900 border border-yellow-500/30 text-amber-50 placeholder-amber-50/40 focus:outline-none focus:border-yellow-500 transition-colors duration-300"
-                    />
-                    <button className="px-4 py-2 bg-yellow-500 text-slate-950 font-semibold hover:bg-orange-600 transition-colors duration-300">
-                      →
-                    </button>
-                  </div>
                 </div>
               </div>
             </div>
