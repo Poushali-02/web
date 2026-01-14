@@ -6,6 +6,7 @@ import Menu from '../components/Menu';
 import Reviews from '../components/Reviews';
 import Footer from '../components/Footer';
 import Navbar from '../components/Navbar';
+import OrderButton from '../components/Order';
 
 function HomePage() {
   return (
@@ -18,6 +19,7 @@ function HomePage() {
       <Menu />
       <Reviews />
       <Footer />
+      <OrderButton />
     </>
   );
 }

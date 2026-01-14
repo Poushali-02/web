@@ -1,6 +1,10 @@
 function Footer() {
   return (
-    <footer className="text-amber-50 border-t border-yellow-500/30 w-full bg-linear-to-b from-slate-950 to-black">
+    <footer className="text-amber-50 border-t border-yellow-500/30 w-full bg-linear-to-b from-slate-950 to-black" 
+    style={{
+      paddingTop: '5%'
+    }}
+    >
       {/* Main Footer Content */}
       <div className="py-20 px-4 md:px-8 lg:px-16 w-full">
         <div className="max-w-full mx-auto">

@@ -69,12 +69,6 @@ function Hero() {
                         Indian Specialties
                     </p>
                 </div>
-
-                {/* Pulsing CTA Button */}
-                <button className="group relative mt-8 px-10 py-4 bg-restaurant-gold text-restaurant-dark font-semibold text-lg tracking-wider uppercase overflow-hidden transition-all duration-300 hover:bg-restaurant-accent hover:scale-105 animate-pulse-slow shadow-2xl">
-                    <a href="#reservation" className="relative z-10">Reserve Your Table</a>
-                    <div className="absolute inset-0 bg-linear-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-1000"></div>
-                </button>
             </div>
         </section>
     );
