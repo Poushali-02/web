@@ -14,7 +14,7 @@ export function OrderModal({ showModal, setShowModal, isHovered, setIsHovered })
   };
   return (
     <div
-        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4 transition-all duration-300 ${
+        className={`fixed inset-0 bg-black/80 backdrop-blur-sm z-60 flex items-center justify-center p-4 transition-all duration-300 ${
           showModal ? "opacity-100 visible" : "opacity-0 invisible"
         }`}
         onClick={() => setShowModal(false)}
