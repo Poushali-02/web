@@ -1,11 +1,15 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import prawn from '../assets/prawn.jpg';
 import chicken from '../assets/chicken.jpg'
 import momo from '../assets/momo.jpg';
 import steak from '../assets/steak.jpg'
+import { OrderModal } from './Order';
 
 function Specialties() {
     const sectionRef = useRef(null);
+
+  const [isHovered, setIsHovered] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -114,7 +118,9 @@ function Specialties() {
                                     <p className="text-yellow-200 text-sm leading-relaxed flex-1" style={{ padding: '1rem' }}>
                                         {item.description}
                                     </p>
-                                    <div className="mt-4 pt-4 border-t border-yellow-500/20" style={{ padding: '1rem' }}>
+                                    <div className="mt-4 pt-4 border-t border-yellow-500/20" style={{ padding: '1rem' }}
+                                    onClick={()=>{setShowModal(true)}}
+                                    >
                                         <span className="text-yellow-500 text-xs uppercase tracking-wider group-hover:tracking-widest transition-all duration-300">
                                             Order Now →
                                         </span>
@@ -124,6 +130,7 @@ function Specialties() {
                         </div>
                     ))}
                 </div>
+                <OrderModal showModal={showModal} setShowModal={setShowModal} isHovered={isHovered} setIsHovered={setIsHovered} />
             </div>
         </section>
     );
