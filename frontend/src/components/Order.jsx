@@ -23,7 +23,7 @@ function OrderButton() {
   return (
     <>
       {/* Floating Button */}
-      <div className="fixed bottom-8 right-8 z-50">
+      <div id="orderBtn" className="fixed bottom-8 right-8 z-50 transition-all duration-500 ease-in-out">
         <button
           onClick={handleClick}
           onMouseEnter={() => setIsHovered(true)}
