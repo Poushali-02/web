@@ -4,36 +4,37 @@ function Footer() {
   useEffect(() => {
     const OrderBtn = document.getElementById("orderBtn");
     const footer = document.getElementById("footer");
-    
+
     if (!OrderBtn || !footer) return;
 
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if(entry.isIntersecting){
-          OrderBtn.style.opacity = '0';
-          OrderBtn.style.transform = 'scale(0.8) translateY(20px)';
-          OrderBtn.style.pointerEvents = 'none';
-        }
-        else{
-          OrderBtn.style.opacity = '1';
-          OrderBtn.style.transform = 'scale(1) translateY(0)';
-          OrderBtn.style.pointerEvents = 'auto';
+        if (entry.isIntersecting) {
+          OrderBtn.style.opacity = "0";
+          OrderBtn.style.transform = "scale(0.8) translateY(20px)";
+          OrderBtn.style.pointerEvents = "none";
+        } else {
+          OrderBtn.style.opacity = "1";
+          OrderBtn.style.transform = "scale(1) translateY(0)";
+          OrderBtn.style.pointerEvents = "auto";
         }
       },
-        {
-          threshold: 0.1
-        }
+      {
+        threshold: 0.1,
+      }
     );
     observer.observe(footer);
 
     return () => observer.disconnect();
-  }, [])
+  }, []);
 
   return (
-    <footer id="footer" className="text-amber-50 border-t border-yellow-500/30 w-full bg-linear-to-b from-slate-950 to-black" 
-    style={{
-      paddingTop: '5%'
-    }}
+    <footer
+      id="footer"
+      className="text-amber-50 border-t border-yellow-500/30 w-full bg-linear-to-b from-slate-950 to-black"
+      style={{
+        paddingTop: "5%",
+      }}
     >
       {/* Main Footer Content */}
       <div className="py-20 px-4 md:px-8 lg:px-16 w-full">
@@ -166,7 +167,7 @@ function Footer() {
                     </span>
                   </a>
                   <a
-                    href="mailto:info@bellacucina.com"
+                    href="mailto:cafelittledarjeeling@gmail.com"
                     className="flex items-center hover:text-yellow-500 transition-colors duration-300 group"
                   >
                     <svg
@@ -274,6 +275,22 @@ function Footer() {
                     </svg>
                   </a>
                   <a
+                    href="mailto:cafelittledarjeeling@gmail.com"
+                    className="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-slate-950 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="MagicPin"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 0 24 24"
+                      fill="currentColor"
+                      class="w-6 h-6"
+                    >
+                      <path d="M2 6.5C2 5.12 3.12 4 4.5 4h15c1.38 0 2.5 1.12 2.5 2.5v11c0 1.38-1.12 2.5-2.5 2.5h-15C3.12 20 2 18.88 2 17.5v-11zm2.2-.3L12 11.4l7.8-5.2a.5.5 0 0 0-.3-.9H4.5a.5.5 0 0 0-.3.9zM4 8.3v8.2c0 .55.45 1 1 1h14c.55 0 1-.45 1-1V8.3l-7.4 4.9a1 1 0 0 1-1.2 0L4 8.3z" />
+                    </svg>
+                  </a>
+                  <a
                     href="https://www.instagram.com/littledarjeeling?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
                     className="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-slate-950 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
                     target="_blank"
@@ -325,43 +342,7 @@ function Footer() {
                       />
                     </svg>
                   </a>
-                  <a
-                    href="mailto:cafelittledarjeeling@gmail.com"
-                    className="w-12 h-12 bg-amber-900 rounded-full flex items-center justify-center hover:bg-yellow-500 hover:text-slate-950 hover:scale-110 transition-all duration-300 shadow-lg hover:shadow-yellow-500/50"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="MagicPin"
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="48"
-                      height="48"
-                      viewBox="0 0 48 48"
-                    >
-                      <title>Magicpin SVG Icon</title>
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M40.37 20.87C40.37 32.874 24 43.5 24 43.5S7.63 32.873 7.63 20.87C7.63 11.83 14.958 4.5 24 4.5s16.37 7.33 16.37 16.37"
-                      />
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M24 8.72c6.71 0 12.15 5.44 12.15 12.15C36.15 29.78 24 37.667 24 37.667S11.85 29.78 11.85 20.871c0-6.71 5.44-12.15 12.15-12.15"
-                      />
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        d="M31.93 20.87c0 5.815-7.93 10.962-7.93 10.962s-7.93-5.147-7.93-10.961a7.93 7.93 0 1 1 15.86 0"
-                      />
-                    </svg>
-                  </a>
+                  
                 </div>
               </div>
             </div>
